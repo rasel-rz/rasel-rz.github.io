@@ -86,6 +86,16 @@ a {
   color: #242424;
 }
 
+#project a {
+  color: #1874cd;
+  text-decoration: none;
+}
+
+#project a:hover {
+  color: #1874cd;
+  text-decoration: underline;
+}
+
 .fa-ul {
   margin-left: 0rem;
 }
