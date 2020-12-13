@@ -98,6 +98,8 @@ a {
 
 .fa-ul {
   margin-left: 0rem;
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
 .form-group {
