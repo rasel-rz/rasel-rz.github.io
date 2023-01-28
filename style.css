@@ -220,13 +220,13 @@ button:active {
     margin: auto auto 0;
     padding: 0.5rem;
   }
- .navbar-brand .img-profile {
+  .navbar-brand .img-profile {
     max-width: 12rem;
     max-height: 12rem;
     border: 0.3rem solid #1873cde0;
     border-radius: 100%;
   }
-.navbar-collapse {
+  .navbar-collapse {
     display: flex;
     flex-direction: column;
     flex-grow: 0;
@@ -244,4 +244,8 @@ button:active {
   .mobile-profession {
     display: none;
   }
+}
+.container-fluid {
+  max-width: 1600px;
+  margin: 0 auto;
 }
