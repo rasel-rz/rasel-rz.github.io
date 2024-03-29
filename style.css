@@ -108,14 +108,12 @@ a {
 
 .progress-bar,
 .btn {
-  background-image: linear-gradient(
-    to right,
-    #bfefff,
-    #8dd2f3,
-    #5fb4e8,
-    #3594dc,
-    #1874cd
-  );
+  background-image: linear-gradient(to right,
+      #bfefff,
+      #8dd2f3,
+      #5fb4e8,
+      #3594dc,
+      #1874cd);
 }
 
 .btn {
@@ -136,6 +134,7 @@ button:active {
 }
 
 @media (min-width: 320px) and (max-width: 992px) {
+
   h1,
   h4 {
     font-size: 5rem;
@@ -160,7 +159,7 @@ button:active {
 
   .resume-section {
     padding-top: 7rem !important;
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
 
   .linkedin-link {
@@ -193,6 +192,7 @@ button:active {
     width: 100%;
     margin: 0 auto;
   }
+
   .form-group {
     width: 100%;
   }
@@ -203,6 +203,7 @@ button:active {
     padding-top: 0;
     padding-left: 18rem;
   }
+
   .resume-section {
     padding-top: 3rem !important;
     padding-bottom: 10rem !important;
@@ -215,17 +216,20 @@ button:active {
     width: 18rem;
     height: 100vh;
   }
+
   .navbar-brand {
     display: flex;
     margin: auto auto 0;
     padding: 0.5rem;
   }
+
   .navbar-brand .img-profile {
     max-width: 12rem;
     max-height: 12rem;
     border: 0.3rem solid #1873cde0;
     border-radius: 100%;
   }
+
   .navbar-collapse {
     display: flex;
     flex-direction: column;
@@ -233,9 +237,11 @@ button:active {
     width: 100%;
     margin-bottom: auto;
   }
+
   .navbar-collapse .navbar-nav {
     width: 100%;
   }
+
   .navbar-nav:first-child {
     border-top: none;
   }
@@ -245,7 +251,16 @@ button:active {
     display: none;
   }
 }
+
 .container-fluid {
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.fa-w-16.fa-w-16 {
+  width: 0.6em;
+}
+
+.edu-icons {
+  margin-bottom: 0;
 }
