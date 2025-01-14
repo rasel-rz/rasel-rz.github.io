@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #414042;
+    --green: #29AA35;
+    --white: #F5F5F5;
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Courier Prime", serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    max-width: 42rem;
+    padding: 1rem;
+    background-color: var(--white);
+    color: var(--black);
+    text-wrap: balance;
+}
+
+section {
+    margin: 1.5rem 0;
+}
+
+h1 {
+    margin: 0 0 2rem;
+    font-size: min(calc(100vw / 12), 4rem);
+}
+
+h3 {
+    margin: 0 0 0.5rem;
+    font-size: min(calc(100vw / 20), 1.5rem);
+    text-transform: capitalize;
+}
+
+h6,
+h5 {
+    margin: 0;
+    font-size: min(calc(100vw / 24), 1.25rem);
+    text-transform: capitalize;
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 0 1rem;
+    font-size: min(calc(100vw / 24), 1.25rem);
+}
+
+ul:has([data-bullet]) {
+    list-style: none;
+    padding: 0;
+}
+
+li:is([data-bullet]) {
+    position: relative;
+    padding-left: 1rem;
+}
+
+li:is([data-bullet])::before {
+    content: attr(data-bullet);
+    font-size: 0.25em;
+    line-height: 4;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+li:has(h5, h6) {
+    margin: 1rem 0;
+}
+
+p {
+    margin: 0.25rem 0;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+h5 a {
+    color: var(--green);
+}
+
+h6 a {
+    display: inline-block;
+}
+
+h6 a::after {
+    content: "\02197";
+    display: inline-block;
+    margin-left: 0.4rem;
+    font-size: 0.8em;
+}
