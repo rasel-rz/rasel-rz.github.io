@@ -10,6 +10,11 @@
     --white: #F5F5F5;
 }
 
+.dark {
+    --black: #F5F5F5;
+    --white: #414042;
+}
+
 body {
     margin: 0 auto;
     font-family: "Courier Prime", serif;
@@ -101,4 +106,34 @@ h6 a::after {
     display: inline-block;
     margin-left: 0.4rem;
     font-size: 0.8em;
+}
+
+label:has(#theme) {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    cursor: pointer;
+}
+
+#theme {
+    display: none;
+}
+
+label:has(#theme)::after {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.dark label:has(#theme):after {
+    content: "\0263C";
+    color: orange;
+}
+
+label:has(#theme)::after {
+    content: "\0263D";
+    transform: rotate(45deg);
+    color: turquoise;
 }

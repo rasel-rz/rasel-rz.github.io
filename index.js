@@ -1,3 +1,18 @@
+(function setThemePreferences() {
+    const systemThemeIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const userThemePreferance = window.localStorage.getItem('pref-theme');
+    if (!userThemePreferance && systemThemeIsDark) document.body.classList.add("dark");
+    if (userThemePreferance) document.body.classList.add(userThemePreferance);
+
+    const themeInput = document.querySelector('#theme');
+    if (document.body.classList.contains('dark')) themeInput.click();
+    themeInput.addEventListener("change", e => {
+        document.body.classList.toggle('dark', themeInput.checked);
+        if (themeInput.checked) window.localStorage.setItem('pref-theme', 'dark');
+        else window.localStorage.setItem('pref-theme', 'light');
+    });
+})();
+
 const emojiList = [
     "⚫", "🔲", "⬛", "🏴", "♠️", "🖤", "🕶️", "🟧", "🟠", "🍊", "🔶", "🍂", "🧡", "🌅", "🦊", "📙", "🔴", "🟥", "❤️", "🔥", "🍎", "🌹", "📕", "🧨", "🎈", "🛑", "🟢", "🟩", "🌿", "🌱", "🍀", "🍃", "🪴", "📗", "🥦"
 ];
