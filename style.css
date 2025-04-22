@@ -137,3 +137,8 @@ label:has(#theme)::after {
     transform: rotate(45deg);
     color: turquoise;
 }
+
+a:hover {
+    opacity: 0.8;
+    transition: opacity 500ms;
+}
